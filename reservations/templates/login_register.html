@@ -1,8 +1,13 @@
-
+{% extends 'base.html' %}
 
 {% block title %}Login{% endblock %}
 
 {% block content %}
+
+
+<div class="container" id="containerloginuser">
+
+
 <h1>Register</h1>
 
 <form action="{% url 'login_register' %}" method="POST">
@@ -33,5 +38,17 @@
 
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+</div>
+
+<div class="container" id="containerloginuser">
+  Have you alreay an account? <a href="{% url 'login_user' %}">Login</a> <br>
+  Or <a href="{% url 'home' %}">Home</a>
+</div>
+ 
 
 {% endblock %}
+
+
+
+
+

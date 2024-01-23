@@ -30,7 +30,7 @@ def login_register(request):
                     user = User.objects.create_user(username=username, email=email, password=password)
                     user.save()
                     messages.success(request, 'User created successfully')
-                    return redirect('login_register') #login
+                    return redirect('home') #login
         else:
             print('Passwords do not match')
             return redirect('login_register')

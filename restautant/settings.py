@@ -79,8 +79,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'restaurante_db', 
         'USER': 'postgres',
-        'PASSWORD': 'nNo7JM64PMseslMZio2utDEhiEXliHM0',
-        'HOST': 'dpg-cmnjcdun7f5s73ctfi50-a.frankfurt-postgres.render.com/restaurant_db_9knd', 
+        'PASSWORD': 'admin',
+        'HOST': 'localhost', 
         'PORT': '5432',
     }
 }

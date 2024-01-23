@@ -1,0 +1,261 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+{% include 'header.html' %}
+
+
+
+<!--  About Section  -->
+<div id="about" class="container-fluid wow fadeIn" id="about"data-wow-duration="1.5s">
+    <div class="row">
+        <div class="col-lg-6 has-img-bg"></div>
+        <div class="col-lg-6">
+            <div class="row justify-content-center">
+                <div class="col-sm-8 py-5 my-5">
+                    <h2 class="mb-4">Our Story</h2>
+                    Our Story
+
+                    <p>At FutHut, we believe that every meal is an opportunity to create lasting memories. Our culinary journey began with a passion for exceptional food and a commitment to providing a welcoming space for our community. Nestled in the heart of Alabama, our restaurant is a testament to the fusion of gastronomic innovation and warm hospitality. </p>
+
+                    <h2>Crafting Culinary Experiences. </h2>
+                    <p> Dedicated to the artistry of flavor, our talented chefs curate a menu that reflects a harmonious blend of global influences and locally-sourced ingredients. From the sizzle of our grills to the artful presentation of each dish, every element is meticulously crafted to elevate your dining experience. Whether you're savoring a signature cocktail or indulging in our chef's special, each bite is a celebration of culinary craftsmanship.</p>
+            
+                    <h2>Your Culinary Haven</h2>
+                    <p>At FutHut, we aspire to be more than just a dining destination; we aim to be your culinary haven. Our commitment to excellence extends beyond the plate, embracing the ambiance, service, and the shared joy of good food. Join us on this gastronomic adventure, where every visit is an opportunity to savor the extraordinary and create moments that linger on the palate and in the heart. Welcome to a dining experience where passion meets plate, and every meal is a story waiting to be savored.</p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  gallary Section  -->
+<div id="gallary" class="text-center bg-dark text-light has-height-md middle-items wow fadeIn">
+    <h2 class="section-title">DISHES WE HAVE ALREADY DONE</h2>
+</div>
+<div class="gallary row">
+    <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+        <img src="{% static 'imgs/gallary-1.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+        <a href="#" class="gallary-overlay">
+            <i class="gallary-icon ti-plus"></i>
+        </a>
+    </div>
+    <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+        <img src="{% static 'imgs/gallary-2.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+        <a href="#" class="gallary-overlay">
+            <i class="gallary-icon ti-plus"></i>
+        </a>
+    </div>
+    <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+        <img src="{% static 'imgs/gallary-3.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+        <a href="#" class="gallary-overlay">
+            <i class="gallary-icon ti-plus"></i>
+        </a>
+    </div>
+    <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+        <img src="{% static 'imgs/gallary-4.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+        <a href="#" class="gallary-overlay">
+            <i class="gallary-icon ti-plus"></i>
+        </a>
+    </div>
+    <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+        <img src="{% static 'imgs/gallary-5.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+        <a href="#" class="gallary-overlay">
+            <i class="gallary-icon ti-plus"></i>
+        </a>
+    </div>
+    <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+        <img src="{% static 'imgs/gallary-6.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+        <a href="#" class="gallary-overlay">
+            <i class="gallary-icon ti-plus"></i>
+        </a>
+    </div>
+    <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+        <img src="{% static 'imgs/gallary-7.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+        <a href="#" class="gallary-overlay">
+            <i class="gallary-icon ti-plus"></i>
+        </a>
+    </div>
+    <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+        <img src="{% static 'imgs/gallary-8.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+        <a href="#" class="gallary-overlay">
+            <i class="gallary-icon ti-plus"></i>
+        </a>
+    </div>
+    
+</div>
+<!-- book a table Section  -->
+{% if user.is_authenticated %}
+<div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
+    <div class="">
+        <h2 class="section-title mb-5">BOOK A TABLE</h2>
+        <div class="row mb-5">
+            <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                <input type="email" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="EMAIL">
+            </div>
+            <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                <input type="number" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="NUMBER OF GUESTS" max="20" min="0">
+            </div>
+            <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                <input type="time" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="EMAIL">
+            </div>
+            <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                <input type="date" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="12/12/12">
+            </div>
+        </div>
+        <a href="#" class="btn btn-lg btn-primary" id="rounded-btn">FIND TABLE</a>
+    </div>
+</div>
+
+{% endif %}
+
+<!-- BLOG Section  -->
+<div id="menu" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn" >
+    <h2 class="section-title py-5">MENU</h2>
+    <div class="row justify-content-center">
+        <div class="col-sm-7 col-md-4 mb-5">
+            <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#foods" role="tab" aria-controls="pills-home" aria-selected="true">Foods</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#juices" role="tab" aria-controls="pills-profile" aria-selected="false">Juices</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="foods" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-transparent border my-3 my-md-0">
+                        <img src="{% static 'imgs/blog-1.jpg'%} " alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$5</a></h1>
+                            <p class="text-white"> <strong>Medium Burger Bliss </strong>  <br>
+
+                                Indulge in burger perfection with our Medium Burger Bliss, crafted to satisfy your cravings. This juicy and succulent delight features a perfectly cooked medium patty, seasoned to perfection. Nestled in a soft bun and adorned with fresh toppings, it promises a classic burger experience that strikes the ideal balance between tenderness and robust flavors. Get ready for a burger sensation that will leave your taste buds dancing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-transparent border my-3 my-md-0">
+                        <img src="{% static 'imgs/blog-2.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$12</a></h1>
+                            <p class="text-white"> <strong> Crisp Salad Symphony</strong>  <br>
+
+                                Embark on a culinary journey with our Crisp Salad Symphony, a delightful medley of fresh, vibrant greens meticulously selected for maximum flavor and crispness. Each bite is a celebration of garden-fresh goodness, complemented by a symphony of colorful vegetables and a choice of zesty dressings. Elevate your dining experience with this refreshing salad, offering a harmonious balance of flavors and textures. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-transparent border my-3 my-md-0">
+                        <img src="{% static 'imgs/blog-3.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$8</a></h1>
+                            <p class="text-white"> <strong>Deluxe Burger Extravaganza</strong>  <br>
+
+                                Experience the epitome of burger excellence with our Deluxe Burger Extravaganza, a gourmet masterpiece designed for discerning palates. This culinary marvel boasts a premium blend of flavors, featuring a succulent deluxe patty, exquisite toppings, and artisanal sauces. Served in a delectable bun, each bite is a journey through layers of taste and texture. Elevate your burger experience with this deluxe creation, where every detail is a celebration of culinary opulence. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="juices" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="row">
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card bg-transparent border">
+                        <img src="{% static 'imgs/blog-4.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$15</a></h1>
+                            <p class="text-white">
+                                 <strong>The Caipirinha: A Brazilian Classic. </strong> <br>
+                                Indulge in the essence of Brazil with our signature Caipirinha, a classic cocktail that beautifully combines cachaça, fresh lime, sugar, and ice. Savor the perfect harmony of sweet and citrus notes in every sip, making it an ideal choice for both special celebrations and casual dining. Join us to experience the authentic taste of Brazil in every carefully crafted glass, elevating your dining experience to new heights. Cheers to the irresistible allure of our Caipirinha, an iconic gem in Brazilian mixology.. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card bg-transparent border">
+                        <img src="{% static 'imgs/blog-5.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$29</a></h1>
+                            <p class="text-white"> <strong>Argentine Apple Bliss.</strong>   <br>
+
+                                Savor the crispness of Argentina with our refreshing Argentine Apple Juice. Made from the finest Argentine apples, this delightful beverage captures the essence of orchard-fresh goodness. The natural sweetness of handpicked apples takes center stage, delivering a wholesome and invigorating experience. Whether you're seeking a non-alcoholic option or a flavorful companion to your meal, our Argentine Apple Juice promises a taste of pure, unfiltered orchard bliss. Elevate your dining experience with this exceptional beverage, bringing the flavors of Argentine orchards directly to your glass. Cheers to the simple, yet exquisite, pleasure of Argentine apple perfection.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card bg-transparent border">
+                        <img src="{% static 'imgs/blog-6.jpg'%}" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$3</a></h1>
+                            <p class="text-white"> <strong>Dutch Orange Elegance. </strong> <br>
+
+                                Embark on a citrus journey with our Dutch Orange Juice, a burst of refreshment made from the finest Dutch oranges. Immerse yourself in the tangy and vibrant flavors of handpicked oranges, capturing the essence of sun-kissed groves in the Netherlands. The zesty notes and natural sweetness of these premium oranges create a delightful and invigorating beverage. Perfect as a non-alcoholic refreshment or as a flavorful accompaniment to your meal, our Dutch Orange Juice promises a taste of pure, unadulterated citrus elegance. Elevate your dining experience with this exceptional beverage, bringing the bright and zesty essence of Dutch oranges straight to your glass. Cheers to the simple, yet exquisite, pleasure of Dutch orange perfection. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- REVIEWS Section  -->
+<div id="testmonial" class="container-fluid wow fadeIn bg-dark text-light has-height-lg middle-items">
+    <h2 class="section-title my-5 text-center">REVIEWS</h2>
+    <div class="row mt-3 mb-5">
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">John Doe</h3>
+                <h6 class="testmonial-subtitle">Wine Specialist</h6>
+                <div class="testmonial-body">
+                    <p>My dining experience at this restaurant was nothing short of exceptional. From the moment I stepped in, the ambiance exuded sophistication, and the attentive staff made me feel truly welcomed. The menu offered a diverse array of dishes, each bursting with flavors and artfully presented. The Argentine Apple Bliss was a refreshing delight, and the Crisp Salad Symphony showcased the chef's commitment to quality ingredients. The Medium Burger Bliss was a standout, perfectly cooked and brimming with succulence. A culinary oasis that seamlessly blends taste and ambiance, this restaurant is a gem for those seeking an exquisite dining experience.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">Steve Thomas</h3>
+                <h6 class="testmonial-subtitle">Civil Engineer</h6>
+                <div class="testmonial-body">
+                    <p>Elegance, a zesty concoction, set the tone for an evening filled with vibrant flavors. The Crisp Salad Symphony was a refreshing starter, offering a perfect balance of textures. The Medium Burger Bliss was a juicy and satisfying choice, while the Deluxe Burger Extravaganza elevated our taste buds to new heights. The attention to detail in each dish showcased the chef's dedication to flavor and presentation. While the ambiance was pleasant, a touch more intimacy would have enhanced the overall dining experience.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">Miranda Joy</h3>
+                <h6 class="testmonial-subtitle">Journalist</h6>
+                <div class="testmonial-body">
+                    <p>This restaurant is a true testament to gastronomic excellence. From the first bite to the last, every dish was a masterpiece. The Argentine Apple Bliss provided a sweet prelude, and the Crisp Salad Symphony was a refreshing interlude. The Medium Burger Bliss, cooked to perfection, demonstrated the chef's skill in balancing flavors. However, it was the Deluxe Burger Extravaganza that stole the show—a culinary symphony of premium ingredients and innovative combinations. The service was impeccable, and the ambiance was sophisticated yet inviting. A dining destination that surpasses expectations and leaves a lasting impression on discerning palates.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT Section  -->
+<div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn">
+    <div class="row">
+        <div class="col-md-6 px-0">
+            <div id="map" style="width: 100%; height: 100%; min-height: 400px"></div>
+        </div>
+        <div class="col-md-6 px-5 has-height-lg middle-items">
+            <h3>FIND US</h3>
+            <p><span class="ti-location-pin pr-3"></span> 12345 Fake ST NoWhere, AB Country</p>
+                <p><span class="ti-support pr-3"></span> (123) 456-7890</p>
+                <p><span class="ti-email pr-3"></span>info@website.com</p>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

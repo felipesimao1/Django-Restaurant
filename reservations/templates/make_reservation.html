@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}Make a reservation{% endblock %}
+
+{% block content %}
+    {% include 'navbar.html' %}
+    {% include 'header.html' %}
+    {% include 'messages.html' %}
+
+    <form action="{% url 'make_reservation' %}" method="post" class="">
+    {% csrf_token %}
+    <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
+        <h2 class="section-title mb-5">Make a Reservation</h2>
+        
+        <div class="col-sm-6 col-md-3 col-xs-12 my-6">
+            <h3>Phone:</h3>
+            <input type="phone" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="Phone" name="phone">
+        </div>
+        <br>
+        <br>
+        <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+            <h3>Table</h3>
+            <select class="form-control form-control-lg custom-form-control" name="table">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+            <h3>Date</h3>
+            <input type="date" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="Date" name="date">
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+            <h3>Time:</h3>
+            <select class="form-control form-control-lg custom-form-control" name="time">
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+                <option value="20:00">20:00</option>
+                <option value="21:00">21:00</option>
+                <option value="22:00">22:00</option>
+                <option value="23:00">23:00</option>
+            </select>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+            <h3>Number of Guests:</h3>
+            <input type="number" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="N of Guests" name="number_of_people">
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+            <h3>Message:</h3>
+            <input type="text" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="Message" name="message">
+        </div>
+
+        <input type="submit" value="Make reservation" style="width: 350px; margin: 50px; padding: 20px;">
+
+
+    </div>
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+    
+{% endblock %}
+

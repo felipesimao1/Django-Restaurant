@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  	
+  <h1>Edit Reservation</h1>
+  <form method="post" action="">
+    {% csrf_token %}
+    <label for="table">Table:</label>
+        <select name="table">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+
+        </select>
+    <br>
+    <label for="date">Date:</label>
+    <input type="date" name="date" id="date" value="{{reservation.date}}">
+    <br>
+    <label for="time">Time:</label>
+    <select name="time" value="{{reservation.time}}">
+        <option value="18:00">18:00</option>
+        <option value="19:00">19:00</option>
+        <option value="20:00">20:00</option>
+        <option value="21:00">21:00</option>
+        <option value="22:00">22:00</option>
+        <option value="23:00">23:00</option>
+    </select>
+    <br>
+    <label for="number_of_people">Number of people:</label>
+    <input type="number" name="number_of_people" id="number_of_people" value="{{ reservation.number_of_people }}">
+    <br>
+    <button type="submit">Save changes</button>
+  </form>
+  <a href="{% url 'profile' %}">Cancel</a>
+{% endblock %}

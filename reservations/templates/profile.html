@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+    {% include 'navbar.html' %}
+    {% include 'header.html' %}
+    {% include 'messages.html' %}
+
+
+<div id="profile">
+    <h1>Profile</h1>
+    <br>
+    <h3>All Reservations of <strong>{{user.username}}</strong></h3>
+    {% for reservation in reservations %}
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Table: {{ reservation.table }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Date: {{ reservation.date }}</h6>
+            <p class="card-text">Time: {{ reservation.time }}</p>
+            <p class="card-text">Guests: {{ reservation.number_of_people }}</p>
+            <a href="{% url 'edit_reservation' pk=reservation.pk %}" class="card-link">Edit</a>
+
+            <a href="{% url 'delete_reservation' pk=reservation.pk%}" class="card-link">Delete</a>
+            <hr>
+        </div>
+    </div>
+
+</div>
+
+{% endfor %}
+{% endblock %}

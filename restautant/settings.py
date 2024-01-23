@@ -80,6 +80,7 @@ DATABASES = {
         'NAME': 'restaurante_db',
         'USER': 'postgres',
         'PASSWORD': 'admin',
+        'HOST': 'localhost',
     }
 }
 

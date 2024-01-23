@@ -1,0 +1,1 @@
+web: gunicorn restautant.wsgi --log-file -
